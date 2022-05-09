@@ -1,0 +1,26 @@
+﻿
+@model IEnumerable<FootBall.Models.Game>
+@{
+    ViewBag.Title = "Index";
+}<h2>
+    Viewing the List...
+</h2>@Html.ActionLink("Enter the Details", "Create")@foreach (var a in Model)
+{
+    <p>
+        MatchID: @a.MatchID
+    </p>
+    <p>
+        TeamName1: @a.TeamName1
+    </p> <p>
+        TeamName2: @a.TeamName2
+    </p> <p>
+        Status: @a.Status
+    </p>
+    <p>
+        WinningTeam: @a.WinningTeam
+    </p> <p>
+        Points: @a.Points
+    </p>
+    <hr />
+}
+

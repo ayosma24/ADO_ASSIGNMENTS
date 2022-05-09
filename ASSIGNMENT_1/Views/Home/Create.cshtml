@@ -1,0 +1,51 @@
+﻿@model FootBall.Models.Game
+    @{
+
+    ViewBag.Title = "Create";
+
+}​​​​​ <h1>FootBallMatch</h1> 
+<h2>Add Match Result</h2> @using (Html.BeginForm("CreateAccount", "Home"))
+
+{
+
+<p>
+
+    MatchID: @Html.TextBoxFor(a => a.MatchID)
+
+</p> <p>
+
+    TeamName1: @Html.TextBoxFor(a => a.TeamName1)
+
+</p> <p>
+
+    TeamName2: @Html.TextBoxFor(a => a.TeamName2)
+
+</p> <p>
+
+    Win : @Html.RadioButtonFor(a => a.Status, "Win")
+
+    Draw :  @Html.RadioButtonFor(a => a.Status, "Draw")    
+</p> <p>
+
+    WinningTeam: @Html.TextBoxFor(a => a.WinningTeam)
+
+</p> <p>
+
+    Points: @Html.TextBoxFor(a => a.Points)
+
+</p>
+
+<input type="submit" value="Save Match Data" />
+
+}​​​​​ 
+
+<div>
+
+    @Html.ActionLink("Back to List", "Index")
+
+</div> @section Scripts {
+
+    @Scripts.Render("~/bundles/jqueryval")
+
+}
+
